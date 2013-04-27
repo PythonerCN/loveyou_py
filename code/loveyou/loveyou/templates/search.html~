@@ -1,0 +1,64 @@
+   <style>
+#ss{
+    text-align:center;  
+   }
+#ss select {
+	width:80px;
+	height:30px;
+}
+   </style>	
+	
+{% extends "base2.html" %}
+{% block left%}
+{% for u in user.get_profile.follow.all %}
+  <img src="/mymedia/{{u.get_profile.headimg}}" alt="" widget="50" height="70"/><br />
+  昵称：{{u}}<br />
+{% endfor %}
+{% endblock %}
+{% block right %}
+<div class="content" id="ss">
+<form method='post'>
+<table>
+    <tr>
+{%for field in sform%}
+		<td>
+		{{field.label}}:
+		</td>
+		<td>
+		{{field}}
+		</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+{%endfor%}
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td><input type='submit' class="btn btn-primary " value='搜索' /></td>
+	</tr>
+</table>
+</form>
+<hr />
+<h1>以下事搜索结果</h1>
+{%for s  in sorts%}
+{%if s.user.username != 'root'%}
+	约会发起人：<a href=''>{{s.user}}</a><br />
+	<img src='/mymedia/{{s.user.get_profile.headimg}}' width='200px' height='150px' /><br />
+	约会地点：{{s.city}}<br />
+	约会类型：{{s.type}}<br />
+	约会时间：{{s.time}}<br />
+	性别:{{s.sexs}}<br />
+	{% for x in s.yuehui_set.all %}
+	约会活动：{{x.content}}<br />
+	约会创建于：{{x.r_time}}
+	{%endfor%}
+{%else%}
+<p>没有符合条件的用户</p> 
+
+{%endif%}
+<hr />
+{%endfor%}
+</div>
+{%endblock%}
+
+
+
+
+
+
+

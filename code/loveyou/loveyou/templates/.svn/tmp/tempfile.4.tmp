@@ -1,0 +1,16 @@
+
+{% extends 'base2.html' %}
+
+{% block right %}
+<div class="content">
+{% for u in user.get_profile.follow.all %}
+  <img src="/mymedia/{{u.get_profile.headimg}}" alt="" widget="50" height="70"/><br />
+  昵称：{{u}}<br />
+  {% for n in u.yuehui_set.all %}
+  约会内容：{{n}}<br />
+  创建于：{{n.r_time}}<hr />
+  
+  {% endfor %}
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+#coding:utf8
+from django.shortcuts import render_to_response
+from django.http import HttpResponse , HttpResponseRedirect
+from django import forms
+from loveyou.applove.models import *
+import random
+
+from django.contrib.auth.decorators import login_required
+@login_required
+
+
+
+class LoginForm(forms.Form):
+	username = forms.CharField(label="姓名")
+	password = forms.CharField(label="密码",widget=forms.PasswordInput)
+class CreateForm(forms.ModelForm):
+	class Meta:
+		model = Sort
+		fields = ('city','type','time','sexs')
+def gc(request):
+	if request.method == 'POST':
+		createform = CreateForm(request.POST)
+		if createform.is_valid():
+			user = createform.cleaned_data['user']
+			city = createform.cleaned_data['city']
+			type = createform.cleaned_data['type']
+			time = createform.cleaned_data['time']
+			sexs = createform.cleaned_data['sexs']
+			sort = Sort.objects.create(user='user',city='city',type='type',time='time',sexs='sexs')
+			return HttpResponse('aa')
+	else:
+		createform = CreateForm()
+	return render_to_response('gc.html',{'createform':createform,'request':request})
+def disp(request):
+	"""广场"""
+	yuehuis = YueHui.objects.all()
+	users = User.objects.exclude(username=request.user.username).exclude(username='root')
+	show_users = []
+	for var_i in xrange(10):
+		if users:
+			user = random.choice(users)
+			if user not in show_users:
+				if request.user.is_authenticated():
+					if user not in request.user.get_profile().follow.all():
+						show_users.append(user)
+				else:
+					show_users.append(user)
+	yuehuis = YueHui.objects.all().order_by('-id')
+	loginform = LoginForm()
+	content = {
+		'yuehuis':yuehuis,
+		'request':request,
+		'loginform':loginform,
+		'show_users':show_users,
+	 }
+	return render_to_response('gc.html',content)

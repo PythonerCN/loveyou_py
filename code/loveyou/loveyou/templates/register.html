@@ -1,0 +1,38 @@
+{% extends 'base2.html' %}
+{%block main %}
+<div class="form-horizontal" id="zh">
+<h3>欢迎注册</h3>
+  <form method="post" enctype="multipart/form-data">
+	<table>
+		<tr><td>{{registform.username.label}}</td><td>{{registform.username}}</td><td>{{registform.username.errors}}</td></tr>
+		<tr><td>{{registform.first_name.label}}</td><td>{{registform.first_name}}</td><td>{{registform.first_name.errors}}</td></tr>
+		<tr><td>{{registform.email.label}}</td><td>{{registform.email}}</td><td>{{registform.email.errors}}</td></tr>
+		<tr><td>{{registform.password.label}}</td><td>{{registform.password}}</td><td>{{registform.password.errors}}</td></tr>
+		<tr><td>{{registform.re_password.label}}</td><td>{{registform.re_password}}</td><td>{{registform.re_password.errors}}</td></tr>
+		<tr><td>{{registform.sex.label}}</td><td>{{registform.sex}}</td></tr>
+		<tr><td>{{registform.address.label}}</td><td>{{registform.address}}</td></tr>
+		<tr><td>{{registform.headimg.label}}</td><td>{{registform.headimg}}</td></tr>
+		</table>
+<!---{%for r in registform%} 
+<table>
+<tr>
+<td>
+{{r.label}}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+{{r}}
+</td>
+</tr>
+</table>
+{%endfor%}--->
+<input type="submit" class="btn btn-info" value="确认"></input>
+  </form>  
+</div>
+<style>
+#zh{
+text-align:center;
+width:400px;
+margin: 0px auto;
+}
+</style>
+{% endblock %}

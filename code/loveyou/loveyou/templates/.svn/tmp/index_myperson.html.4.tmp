@@ -1,0 +1,33 @@
+
+{% extends 'base2.html' %}
+{% block left %} 
+<ul class="nav nav-tabs nav-stacked">
+    <li ><a href="/home/myperson/">个人信息</a></li>
+    <li><a href="/home/mydate/">我的约会</a></li>
+    <li><a href="/home/myfollow/">我的关注</a></li>
+</ul>
+{% endblock %}
+
+{% block right%}
+
+<div>
+  <img src="/mymedia/{{user.get_profile.headimg}}" alt="" width="150px" height="80px"/><br />
+  
+   登录名：{{user.username}}<br />
+   昵称：{{user.first_name}}<br />
+   性别：{{user.get_profile.sex}}<br />
+   所在地：{{user.userprofile_set.all.0.address}}<br />
+   邮箱：{{user.email}}<br />
+
+</div>
+<div>
+   最新约会：
+   
+  {% for u in user.get_profile.yuehui_set.all %}<br /><hr />
+  约会内容：{{u}}<br />
+  创建于：{{u.r_time}}<hr />
+  {% endfor %}
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,26 @@
+
+{% extends 'base2.html' %}
+<<<<<<< .mine
+{% block left %} 
+<ul class="nav nav-tabs nav-stacked">
+    <li ><a href="/home/myperson/">个人信息</a></li>
+    <li><a href="/home/mydate/">我的约会</a></li>
+    <li><a href="/home/myfollow/">我的关注</a></li>
+</ul>
+{% block right %}
+=======
+
+{% block right %}
+>>>>>>> .r319
+<div class="content">
+{% for u in user.get_profile.follow.all %}
+  <img src="/mymedia/{{u.get_profile.headimg}}" alt="" widget="50" height="70"/><br />
+  昵称：{{u}}<br />
+  {% for n in u.yuehui_set.all %}
+  约会内容：{{n}}<br />
+  创建于：{{n.r_time}}<hr />
+  
+  {% endfor %}
+{% endfor %}
+</div>
+{% endblock %}

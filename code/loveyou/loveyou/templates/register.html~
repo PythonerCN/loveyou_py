@@ -1,0 +1,21 @@
+{% extends 'base2.html' %}
+{%block main %}
+<div class="form-horizontal" id="zh">
+<h3>欢迎注册</h3>
+  <form method="post" enctype="multipart/form-data">
+{{registform}} 
+
+<input type="submit" class="btn btn-info" value="确认"></input>
+  </form>  
+</div>
+<style>
+#zh{
+text-align:center;
+width:400px;
+margin: 0px auto;
+}
+label{
+position:absolute;	
+}
+</style>
+{% endblock %}

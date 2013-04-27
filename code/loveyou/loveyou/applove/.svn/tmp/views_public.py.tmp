@@ -1,0 +1,62 @@
+#coding:utf8
+#公共功能
+from django.http import HttpResponse , HttpResponseRedirect
+from django import forms
+from loveyou.applove.models import *
+from django.contrib import auth
+from django.shortcuts import render_to_response
+<<<<<<< .mine
+
+=======
+from django.contrib.auth.models import User
+>>>>>>> .r361
+import models
+import re
+
+
+
+def ulogin(request):
+    '''登录'''
+    if request.method == 'POST':
+       username = request.POST.get('username','')
+       passwrod = request.POST.get('password','')
+       if username and password:
+           user = auth.autherticate(username=username,password=password)
+           print user
+           if user is not None:
+               auth.login(request,user)
+               return HttpResponseRedirect('/myhome/myhome/')
+<<<<<<< .mine
+               return HttpResponse('用户认证失败')
+    else:
+            return HttpResponse('用户或密码为空')
+=======
+           return HttpResponse('用户认证失败')
+       else:
+           return HttpResponse('用户或密码为空')
+>>>>>>> .r361
+
+
+def ulogout(request):
+    '''注销'''
+
+    auth.logout(request)
+    return HttpResponRedirect('/index/index/')
+def collect_add(request, uid):
+    '''收藏'''
+    yuehui = models.YueHui.objects.get(id=uid)
+    request.user.get_profile().collect.add(yuehui)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER','/')) # 收藏成功后，返回到提交前的页面
+def collect(request):
+    '''收藏页面'''
+    collects = request.user.get_profile().collect.all()
+    return render_to_response('collect.html', {'collects': collects, 'request': request})
+def forwarding(request,uid):
+    yuehui = models.YueHui.objects.get(id=uid)
+    return render_to_response('index_myfollow.html',{'yuehui':yuehui,'request':request})
+def forwarding_add(request,uid):
+    '''增加关注'''
+    user = User.objects.get(id=uid)
+    request.user.get_profile().follow.add(user)
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER','/'))#关注成功之后返回以前的页面
+    

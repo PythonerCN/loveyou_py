@@ -1,0 +1,60 @@
+
+{% extends 'base2.html' %}
+
+{% block left%}
+
+<div>
+  <img src="/mymedia/{{user.get_profile.headimg}}" alt="" width="150px" height="80px"/><br />
+  
+   登录名：{{user.username}}<br />
+   昵称：{{user.first_name}}<br />
+   性别：{{user.get_profile.sex}}<br />
+   所在地：{{user.userprofile_set.all.0.address}}<br />
+   邮箱：{{user.email}}<br />
+
+</div>
+<ul class="nav nav-tabs nav-stacked">
+    <li><a href="/home/myperson/">个人信息</a></li>
+    <li><a href="/home/myfollow/">我的关注</a></li>
+    <li ><a href="/setting/2/">修改密码</a></li>
+    <li><a href="/setting/3/">修改头像</a></li>
+    <li><a href="/setting/1/">修改个人信息</a></li>
+</ul>
+{% endblock %}
+<div >
+{% block right %}
+  {% for u in user.yuehui_set.all %}<br /><hr />
+  约会内容：{{u.content}}<br />
+  {%for x in u.sort.all%}
+  约会地点：{{x.city}}<br />
+	约会类型：{{x.type}}<br />
+	约会时间：{{x.time}}<br />
+	{%endfor%}
+  创建于：{{u.r_time}}<hr />
+{% endfor %}
+
+{% endblock %}
+</div>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+function insertcode(date){
+		var $body = $("body");
+		$body.append(date)
+}
+$(document).ready(function(){
+	$(window).scroll(function(){
+	var $body = $("body");
+	if (($(window).height() + $(window).scrollTop()) >= $body.height()) {
+	//insertcode();
+	$.ajax({
+	url:'index_mydate.html',
+	dataType:'html',
+	success:function(date){
+	//alert('a');
+	insertcode(date);
+	}
+	});
+	}
+});
+	});
+</script>

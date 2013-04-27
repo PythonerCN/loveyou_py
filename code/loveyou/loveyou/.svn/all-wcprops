@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/loveyou/!svn/ver/406/trunk/loveyou/loveyou
+END
+wsgi.py
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/loveyou/!svn/ver/2/trunk/loveyou/loveyou/wsgi.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/loveyou/!svn/ver/2/trunk/loveyou/loveyou/__init__.py
+END
+settings.py
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/loveyou/!svn/ver/225/trunk/loveyou/loveyou/settings.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/loveyou/!svn/ver/359/trunk/loveyou/loveyou/urls.py
+END

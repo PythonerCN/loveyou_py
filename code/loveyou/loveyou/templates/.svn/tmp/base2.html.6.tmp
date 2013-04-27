@@ -1,0 +1,140 @@
+	﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="root" />
+    <title> 网站首页</title>
+
+     <link href="js/jequery.js" ></link>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />    
+    <link href="css/haijun.css" rel="stylesheet" />
+    
+	<style>
+		#main{
+			border: 1px solid red;
+			width:900px;
+			margin:0 auto;
+			padding:0;
+		}
+		#left{
+			position:relative;
+			float:left;
+			width:223px;
+			padding:0;
+			margin:0;
+			border:1px solid black;
+		}
+		#right{
+			position:relative;
+			float:right;
+			margin:0;
+			padding:0;
+			width:670px;
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+    <!--top start-->
+    <div class="top">
+    {% block top%}{% endblock %}
+        <div class="layout">
+            <div class="grid">
+                <div class="logo1"><a href="/" title="一起恋爱吧"></a></div>
+                <div class="menu">
+                    <ul class="menuItem">
+                        <li class="active"><a href="/index/">网站首页</a></li>
+                       	<li><a href="/home/myperson/">个人主页</a></li>
+                        <li><a href="/search/search">搜索约会</a></li>
+                        <li><a href="/gc/gc">约会广场</a></li>
+                        <li><a href="#">队伍</a></li>
+                        <li><a href="#">联系我们</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li><a href="/regist/regist">注册</a></li>
+                        <li><a href="/login/login">登录</a></li>
+                        <li><a href="/setting/1/">设置</a></li>
+                        <a href="/home/myperson/?username={{request.user.id}}/">昵称：{{u}}</a>
+                        <li><a href="/login/login/">注销</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+   <div class="content" >
+		<div id='main'>
+            {%block main%}
+			<div id='left'>
+				{%block left%}
+				{%endblock%}
+			</div>
+			<div id='right'>
+                {%block right%}
+                {%endblock%}
+			</div>
+            {%endblock%}
+		</div>		
+   </div>
+  
+    <!--content end-->
+    <div class="footer">
+    {% block footer %}{% endblock %}
+        <div class="layout">
+            <div class="grid">
+                <div class="pull-left phone">
+                    <h4>联系方式</h4>
+                    <p>邮箱：wwww@qq.com</p>
+                    <p>手机：wwwwww</p>
+                    <p>QQ:wwwwww436www79</p>
+                    <p>地址：wwwww</p>
+                </div>
+                <div class="pull-left phone">
+                    <h4>网站导航</h4>
+                        <p><a href="#">关于我们</a></p>
+                        <p><a href="#">最新动态</a></p>
+                        <p><a href="#">服务介绍</a></p>
+                        <p><a href="#">明星队伍</a></p>
+                </div>
+                <div class="pull-left share">
+                    <!-- Baidu Button BEGIN -->
+                    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+                        <a class="bds_qzone"></a>
+                        <a class="bds_tsina"></a>
+                        <a class="bds_tqq"></a>
+                        <a class="bds_renren"></a>
+                        <span class="bds_more"></span>
+                        <a class="shareCount"></a>
+                    </div>
+                    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0"></script>
+                    <script type="text/javascript" id="bdshell_js"></script>
+                    <script type="text/javascript">
+                        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000)
+                    </script>
+                    <!-- Baidu Button END -->
+                    <div class="clearfix"></div>
+                    
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!--footer end-->
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.bxSlider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#slider').bxSlider({
+                auto: true,
+                pager:true
+            });
+            $('#slider2').bxSlider({
+                mode: 'fade',
+                captions: true,
+                auto: true,
+                controls: false
+            });
+        });
+    </script>
+</body>
+</html>

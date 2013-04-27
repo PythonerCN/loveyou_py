@@ -1,0 +1,40 @@
+
+#dl{
+text-align:center;
+margin:200px 300px;
+height:100px;
+
+}
+#dl input{
+height:30px;
+}
+
+</style>
+
+{% extends 'base2.html' %}
+
+{% block main %}
+<div id="dl">
+<form method="post" action="/login/login/">
+<table>
+<tr>
+<td>
+{{loginform.name.label}}:	
+<td>
+{{loginform.name}}
+</td>
+</tr>
+<tr>
+<td>
+{{loginform.password.label}}:
+</td>
+<td>
+{{loginform.password}}
+</td>
+</tr>
+</table>
+<input type="submit" value="登录" class='btn btn-info'/>
+   
+</form>
+</div>
+{% endblock %}

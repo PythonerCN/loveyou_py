@@ -1,0 +1,68 @@
+<style>
+#cj{width:180px}
+</style>
+{% extends 'base2.html' %}
+
+
+
+{% block left %}
+<div class="content">
+   <a href="#myModal" role="button" data-toggle="modal" class="btn btn-large" id="cj">一起约会吧</a></p>
+      <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h3 id="myModalLabel">亲 来创建个约会吧</h3>
+           </div>
+           <div class="modal-body">
+               <form method="post" action="/home/myperson/">
+              {{createform.as_p}}
+              <input class="btn" type="submit" value="ok"></input> 
+               </form>         </div>
+      </div>
+</div>
+{% endblock %}
+{% block right %}
+ <div style='height:1000px'>
+{% for user in user.get_profile.all %}
+  <img src="/mymedia/{{u.get_profile.headimg}}" alt="" widget="50" height="70"/><br />
+  昵称：{{user}}<br />
+  {% for n in user.yuehui_set.all %}
+  约会内容：{{n}}<br />
+  创建于：{{n.r_time}}<hr />
+  
+  {% endfor %}
+{% endfor %}
+{% for user in show_users %}
+<img src="/mymedia/{{user.get_profile.headimg}}" alt="" width="40px" />
+<a href="/home/myperson/{{user.id}}/" >&nbsp;&nbsp;&nbsp;{{user.username}}</a><br />
+{% if request.user.is_authenticated %}
+<a href="/public/loveyou/following_add/{{user.id}}/" >&nbsp;&nbsp;&nbsp;关注</a>
+{%endif%}
+</li>
+
+{%endfor%}
+</div>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+function insertcode(date){
+		var $body = $("body");
+		$body.append(date)
+}
+$(document).ready(function(){
+	$(window).scroll(function(){
+	var $body = $("body");
+	if (($(window).height() + $(window).scrollTop()) >= $body.height()) {
+	//insertcode();
+	$.ajax({
+	url:'gc.html',
+	dataType:'html',
+	success:function(date){
+	//alert('a');
+	insertcode(date);
+	}
+	});
+	}
+});
+	});
+</script>
+{% endblock %}

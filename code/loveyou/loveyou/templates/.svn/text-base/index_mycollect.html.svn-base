@@ -1,0 +1,29 @@
+{%extends 'base2.html'%}
+{%block left%}
+		<img src='/mymedia/{{user.get_profile.headimg}}' alt='' width='210px' height='210px' /><br />
+		{{user.username}}<br />
+		{{collect_num}}
+{%endblock%}
+
+{%block right%}
+		{%for collect in collect %}
+			{{collect}}
+		{%endfor%}
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

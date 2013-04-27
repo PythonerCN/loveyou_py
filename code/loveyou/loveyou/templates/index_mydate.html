@@ -1,0 +1,40 @@
+
+{% extends 'base2.html' %}
+
+{% block left%}
+
+<div>
+  <img src="/mymedia/{{user.get_profile.headimg}}" alt="" width="210px" height="210px"/><br />
+  
+   登录名：{{user.username}}<br />
+   昵称：{{user.first_name}}<br />
+   性别：{{user.get_profile.sex}}<br />
+   所在地：{{user.userprofile_set.all.0.address}}<br />
+   邮箱：{{user.email}}<br />
+
+
+<ul class="nav nav-tabs nav-stacked">
+    <li><a href="/home/myperson/">个人信息</a></li>
+    <li><a href="/home/myfollow/">我的关注</a></li>
+    <li ><a href="/setting/2/">修改密码</a></li>
+    <li><a href="/setting/3/">修改头像</a></li>
+    <li><a href="/setting/1/">修改个人信息</a></li>
+</ul>
+</div>
+{% endblock %}
+{% block right %}
+aaaaaaaaaaaaaaaaaaaaa
+<div>
+  {%for u in yuehui%}<br /><hr />
+  aaaaaaaabaaaaaa
+  约会内容：{{u.content}}<br />
+  		{%for x in u.sort.all%}
+  			约会地点：{{x.city}}<br />
+			约会类型：{{x.type}}<br />
+			约会时间：{{x.time}}<br />
+		{%endfor%}
+  			创建于：{{u.r_time}}<hr />
+	{%endfor%}
+</div>
+
+{% endblock %}

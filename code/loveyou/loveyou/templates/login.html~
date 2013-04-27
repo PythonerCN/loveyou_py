@@ -1,0 +1,27 @@
+<style>
+
+
+
+</style>
+
+{% extends 'base2.html' %}
+
+{%block main %}
+<div class="content" id="dl">
+{% if not request.user.is_authenticated %}
+<form method="post" action="/login/login/">
+
+{{loginform}}<br />	
+<input type="submit" value="登录" />
+<input type="button" value="注册" class="btn btn-info" onclick="location.href='/regist/regist'" />
+   
+</form>
+{%endif%}
+{% endblock %}
+
+</div>
+<div>
+{%block footer%}
+{%endblock%}
+
+</div>

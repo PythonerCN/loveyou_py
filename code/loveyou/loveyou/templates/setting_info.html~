@@ -1,0 +1,12 @@
+
+{% extends 'base2.html' %}
+
+{%block right%}
+
+<form method="post" enctype="multipart/form-data">
+{{settinginfo.as_p}}
+<input type="submit" value="OK" class="btn btn-info"></input>
+</form>
+{% endblock %}
+
+

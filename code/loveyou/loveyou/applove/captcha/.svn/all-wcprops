@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/loveyou/!svn/ver/169/trunk/loveyou/loveyou/applove/captcha
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/loveyou/!svn/ver/169/trunk/loveyou/loveyou/applove/captcha/views.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/loveyou/!svn/ver/169/trunk/loveyou/loveyou/applove/captcha/__init__.py
+END
+helpers.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/loveyou/!svn/ver/169/trunk/loveyou/loveyou/applove/captcha/helpers.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/loveyou/!svn/ver/169/trunk/loveyou/loveyou/applove/captcha/models.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/loveyou/!svn/ver/169/trunk/loveyou/loveyou/applove/captcha/urls.py
+END
+fields.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/loveyou/!svn/ver/169/trunk/loveyou/loveyou/applove/captcha/fields.py
+END

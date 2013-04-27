@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/loveyou/!svn/ver/405/trunk/loveyou/loveyou/applove
+END
+admin.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/loveyou/!svn/ver/246/trunk/loveyou/loveyou/applove/admin.py
+END
+views_setting.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/loveyou/!svn/ver/331/trunk/loveyou/loveyou/applove/views_setting.py
+END
+views_public.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/loveyou/!svn/ver/353/trunk/loveyou/loveyou/applove/views_public.py
+END
+views.py
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/loveyou/!svn/ver/205/trunk/loveyou/loveyou/applove/views.py
+END
+urls_gc.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/loveyou/!svn/ver/402/trunk/loveyou/loveyou/applove/urls_gc.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/loveyou/!svn/ver/2/trunk/loveyou/loveyou/applove/__init__.py
+END
+tests.py
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/loveyou/!svn/ver/2/trunk/loveyou/loveyou/applove/tests.py
+END
+urls_regist.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/loveyou/!svn/ver/61/trunk/loveyou/loveyou/applove/urls_regist.py
+END
+create.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/loveyou/!svn/ver/184/trunk/loveyou/loveyou/applove/create.py
+END
+urls_myhome.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/loveyou/!svn/ver/5/trunk/loveyou/loveyou/applove/urls_myhome.py
+END
+views_gc.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/loveyou/!svn/ver/343/trunk/loveyou/loveyou/applove/views_gc.py
+END
+views_regist.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/loveyou/!svn/ver/385/trunk/loveyou/loveyou/applove/views_regist.py
+END
+urls_search.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/loveyou/!svn/ver/38/trunk/loveyou/loveyou/applove/urls_search.py
+END
+urls_index.py
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/loveyou/!svn/ver/405/trunk/loveyou/loveyou/applove/urls_index.py
+END
+urls_login.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/loveyou/!svn/ver/34/trunk/loveyou/loveyou/applove/urls_login.py
+END
+urls_setting.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/loveyou/!svn/ver/252/trunk/loveyou/loveyou/applove/urls_setting.py
+END
+views_search.py
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/loveyou/!svn/ver/305/trunk/loveyou/loveyou/applove/views_search.py
+END
+models.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/loveyou/!svn/ver/389/trunk/loveyou/loveyou/applove/models.py
+END
+urls_public.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/loveyou/!svn/ver/355/trunk/loveyou/loveyou/applove/urls_public.py
+END
+views_index.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/loveyou/!svn/ver/373/trunk/loveyou/loveyou/applove/views_index.py
+END
+views_login.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/loveyou/!svn/ver/302/trunk/loveyou/loveyou/applove/views_login.py
+END

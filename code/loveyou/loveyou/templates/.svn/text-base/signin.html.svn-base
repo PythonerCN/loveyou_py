@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  
+    <meta charset="utf-8">
+    <title>欢迎来到爱的世界</title>
+
+    <!-- Le styles -->
+    <link href="signin_files/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+
+    </style>
+    <link href="signin_files/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://www.bootcss.com/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://www.bootcss.com/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://www.bootcss.com/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://www.bootcss.com/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="http://www.bootcss.com/assets/ico/favicon.png">
+  <script>try {  for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){    var lastpass_f = document.forms[lastpass_iter];    if(typeof(lastpass_f.lpsubmitorig)=="undefined"){      if (typeof(lastpass_f.submit) == "function") {        lastpass_f.lpsubmitorig = lastpass_f.submit;        lastpass_f.submit = function(){          var form = this;          try {            if (document.documentElement && 'createEvent' in document)            {              var forms = document.getElementsByTagName('form');              for (var i=0 ; i<forms.length ; ++i)                if (forms[i]==form)                {                  var element = document.createElement('lpformsubmitdataelement');                  element.setAttribute('formnum',i);                  element.setAttribute('from','submithook');                  document.documentElement.appendChild(element);                  var evt = document.createEvent('Events');                  evt.initEvent('lpformsubmit',true,false);                  element.dispatchEvent(evt);                  break;                }            }          } catch (e) {}          try {            form.lpsubmitorig();          } catch (e) {}        }      }    }  }} catch (e) {}</script></head><body>
+
+    <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">请登录</h2>
+        帐号：<input class="input-block-level" placeholder="Email address" type="text">
+        密码：<input class="input-block-level" placeholder="Password" type="password">
+        <label class="checkbox">
+          <input value="remember-me" type="checkbox"> 记住我
+        </label>
+        <button class="btn btn-large btn-primary" type="submit" onclick="location.href='/index/'">进入</button>
+      </form>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="signin_files/jquery.js"></script>
+    <script src="signin_files/bootstrap-transition.js"></script>
+    <script src="signin_files/bootstrap-alert.js"></script>
+    <script src="signin_files/bootstrap-modal.js"></script>
+    <script src="signin_files/bootstrap-dropdown.js"></script>
+    <script src="signin_files/bootstrap-scrollspy.js"></script>
+    <script src="signin_files/bootstrap-tab.js"></script>
+    <script src="signin_files/bootstrap-tooltip.js"></script>
+    <script src="signin_files/bootstrap-popover.js"></script>
+    <script src="signin_files/bootstrap-button.js"></script>
+    <script src="signin_files/bootstrap-collapse.js"></script>
+    <script src="signin_files/bootstrap-carousel.js"></script>
+    <script src="signin_files/bootstrap-typeahead.js"></script>
+
+  </body></html>

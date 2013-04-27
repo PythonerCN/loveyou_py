@@ -1,0 +1,45 @@
+
+
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>loveyou 浪漫的微博</title>
+<meta name="description" content="恋恋看,爱情交友网站,微博恋爱应用" />
+<meta name="keywords" content="微博,应用,爱情,交友,约会,相亲" />
+<link href="http://llk.aizuji.com:80/style/screen.css" rel="stylesheet" />
+<base href="" />
+<!--[if IE]>
+<script src="http://llk.aizuji.com:80/js/html5.js"></script>
+<![endif]-->
+</head>
+<body class="sub-body">
+<div class="sub-topheader ie6fixedTL">
+<header class="sub-header">
+	<h1><a href="" class="" title="loveyou最浪漫的微博">loveyou浪漫的微博恋爱</a></h1>
+	<ul class="sub-nav">
+		<li id="nav1"><a href="llk.jsp">我的恋恋看<span></span></a></li>
+		<li id="nav2"><a href="love.jsp">暗恋<span></span></a></li>
+		<li id="nav3"><a href="date.jsp">约会<span></span></a></li>
+	</ul>
+</header>
+</div>
+
+<article class="sub-content">
+	<div class="sub-warp1">		
+		<div class="sub-main">			
+			<!--没有内容时候显示-->
+			<div class="con-null3">
+				{{userform.as_p}}
+			</div>
+			<!--//没有内容时候显示-->
+		</div>
+	</div>
+</article>
+
+<footer class="page-footer">
+<br/>
+</footer>
+</body>
+</html>

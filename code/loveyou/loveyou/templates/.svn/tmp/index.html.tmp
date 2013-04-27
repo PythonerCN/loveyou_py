@@ -1,0 +1,217 @@
+	﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="root" />
+    <title>网站首页</title>
+    <script src="js/jquery.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/haijun.css" rel="stylesheet" />
+</head>
+<body>
+    <!--top start-->
+    <div class="top">
+        <div class="layout">
+            <div class="grid">
+
+                 <div class="menu">
+                    <ul class="menuItem">
+                        <li class="active"><a href="/index/">网站首页</a></li>
+<<<<<<< .mine
+                       	<li><a href="/home/myperson/">我的约会</a></li>
+                        <li><a href="/search/search">搜索约会</a></li>
+                        <li><a href="/gc/gc">约会广场</a></li>
+                        </a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="/home/myperson/?username={{request.user.id}}/"></a>
+                        <li><a href="/setting/1/">设置</a></li>                        
+                        <li><a href="/login/login/">注销</a></li>
+=======
+                       	<li><a href="#">我的约会</a></li>
+                        <li><a href="#">搜索约会</a></li>
+                        <li><a href="#">约会广场</a></li>
+                        <li><a href="/regist/regist/">注册</a></li>
+                        <li><a href="/login/login">登录</a></li>
+>>>>>>> .r394
+                    </ul>
+                </div>	
+            </div>
+        </div>
+    </div>
+    <!--top end-->
+    <!--header start-->
+    <div class="header">
+        <div class="layout">
+            <div class="grid">
+                <div class="pd20">
+                <ul id="slider">
+                    <li><a href="#"><img src="img/s1.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="img/s2.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="img/s3.jpg" alt="" /></a></li>
+                    <li><a href="#"><img src="img/s3.jpg" alt="" /></a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header end-->
+    <!--content start-->
+    <div class="content">
+        <div class="layout">
+            <div class="grid">
+                <div class="showcase">
+                    <dl>
+                        <dt><a href="#">test</a></dt>
+                        <dd class="thumbpic"><a href="#">
+                            <img src="img/t1.jpg" alt="张学友" /></a></dd>
+                        <dd class="thumbtext">test</dd>
+                        <dd class="more"><a href="#">阅读全文</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">test</a></dt>
+                        <dd class="thumbpic"><a href="#">
+                            <img src="img/t2.jpg" alt="范冰冰" /></a></dd>
+                        <dd class="thumbtext">test</dd>
+                        <dd class="more"><a href="#">详细介绍</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">test</a></dt>
+                        <dd class="thumbpic"><a href="#">
+                            <img src="img/t3.jpg" alt="刘德华" /></a></dd>
+                        <dd class="thumbtext">test</dd>
+                        <dd class="more"><a href="#">详细介绍</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><a href="#">test</a></dt>
+                        <dd class="thumbpic"><a href="#">
+                            <img src="img/t4.jpg" alt="姚晨" /></a></dd>
+                        <dd class="thumbtext">test</dd>
+                        <dd class="more"><a href="#">详细介绍</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <!--showcase end-->
+            <div class="into">
+                <div class="grid">
+                    <div class="pull-left logo2">
+                        <h3>关注生活</h3>
+                        <h4>关注用户体验</h4>
+                    </div>
+                    <div class="pull-left intotext">
+                        <p><b>一起恋爱吧</b></p>
+                        <p>1.创建约会 2.关注好友 3.一键查找好友方便简洁   <a href="#myModal" role="button" data-toggle="modal">更多介绍</a></p>
+                        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3 id="myModalLabel">功能简介</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>1、创建约会</p>
+                                <p>2、关注好友</p>
+                                <p>3、查找好友 订阅约会</p>
+                                <p>4、留言功能 </p>
+                                <p>5、保护用户的隐私 关注用户体验</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">点击关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{s}}
+            <!--into end-->
+            <div class="content-bottom">
+                <div class="grid">
+                    <div class="block1 pull-left">
+                        <h4>一起恋爱吧</h4>
+                     </div>
+                    <div class="block2 pull-left">
+                        <h4>最新动态</h4>
+                        <ul>
+                            <li><a href="#">一起恋爱活动最新上线 很不错哦</a></li>
+                            <li><a href="#">页面</a></li>
+                            <li><a href="#">一起恋爱吧</a></li>
+                            <li><a href="#">哈哈哈哈</a></li>
+                            <li><a href="#">你好</a></li>
+                        </ul>
+                        <p class="more"><a href="#">更多内容</a></p>
+                    </div>
+                    <div class="block3 pull-left">
+                        <ul id="slider2">
+                            <li><a href="#" class="thumbnail"><img src="img/b1.jpg"  title="张学友"/></a></li>
+                            <li><a href="#" class="thumbnail"><img src="img/b2.jpg"  title="刘德华"/></a></li>
+                            <li><a href="#" class="thumbnail"><img src="img/b3.jpg"  title="李冰冰"/></a></li>
+                            <li><a href="#" class="thumbnail"><img src="img/b4.jpg"  title="张国荣"/></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--content-bottom end-->
+            <div class="link">
+                <dl>
+                    <dt>友情链接：</dt>
+                    <dd><a href="http://www.JiaYuan.com/">世纪佳缘</a></dd>
+                    <dd><a href="http://www.Baihe.net/">百合</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <!--content end-->
+    <div class="footer">
+        <div class="layout">
+            <div class="grid">
+                <div class="pull-left phone">
+                    <h4>联系方式</h4>
+                    <p>邮箱：aaaaaaa@qq.com</p>
+                    <p>手机：8888</p>
+                    <p>QQ:8888888888</p>
+                </div>
+                <div class="pull-left phone">
+                    <h4>网站导航</h4>
+                        <p><a href="#">关于我们</a></p>
+                        <p><a href="#">最新动态</a></p>
+                        <p><a href="#">服务介绍</a></p>
+                        <p><a href="#">明星队伍</a></p>
+                </div>
+                <div class="pull-left share">
+                    <!-- Baidu Button BEGIN -->
+                    <div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+                        <a class="bds_qzone"></a>
+                        <a class="bds_tsina"></a>
+                        <a class="bds_tqq"></a>
+                        <a class="bds_renren"></a>
+                        <span class="bds_more"></span>
+                        <a class="shareCount"></a>
+                    </div>
+                    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0"></script>
+                    <script type="text/javascript" id="bdshell_js"></script>
+                    <script type="text/javascript">
+                        document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000)
+                    </script>
+                    <!-- Baidu Button END -->
+                    <div class="clearfix"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer end-->
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.bxSlider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#slider').bxSlider({
+                auto: true,
+                pager:true
+            });
+            $('#slider2').bxSlider({
+                mode: 'fade',
+                captions: true,
+                auto: true,
+                controls: false
+            });
+        });
+    </script>
+</body>
+</html>

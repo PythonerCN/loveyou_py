@@ -1,0 +1,36 @@
+
+{% extends 'base2.html' %}
+
+{% block left %}
+<div id="b1">
+<button class="btn btn-large" value="个人信息" onclick="loction.href='#'"></button>
+</div>
+<div id="b2">
+<button class="btn btn-large" value="我的约会" onclick="loction.href='#'"></button>
+
+</div>
+<div id="b3">
+<button class="btn btn-large" value="我的关注" onclick="loction.href='#'"></button>
+
+</div>
+
+<div class="content">
+  <img src="/mymedia/{{user.get_profile.headimg}}" alt="" widget="50" height="70"/><br />
+  
+   登录名：{{user.username}}<br />
+   昵称：{{user.first_name}}<br />
+   所在地：{{user.userprofile_set.all.0.address}}<br />
+   邮箱：{{user.email}}<br />
+
+</div>
+<div>
+   最新约会：
+   
+  {% for u in user.yuehui_set.all %}<br /><hr />
+  约会内容：{{u}}<br />
+  创建于：{{u.r_time}}<hr />
+  {% endfor %}
+
+</div>
+{% endblock %}
+
